@@ -8,7 +8,7 @@ try {
     console.log(`Hello ${nameToGreet}!`);
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
-    await exec.exec('"php -v"',);
+    console.log(exec.exec('"php -v"',));
 } catch (error) {
     core.setFailed(error.message);
 }
